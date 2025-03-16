@@ -1,3 +1,5 @@
+import { initialCards } from './scripts/cards.js';
+import './pages/index.css';
 // @todo: Темплейт карточки
 const cardTemplate = document.getElementById("card-template");
 //Контейнер для размещения карточек
@@ -29,6 +31,7 @@ function deleteCard (delButton) {
 
 // @todo: Вывести карточки на страницу
 initialCards.forEach(element => {
+    console.log(element)
     list.append(createCard(element.name, element.link, deleteCard));
 
 });
