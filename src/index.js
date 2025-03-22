@@ -22,9 +22,12 @@ const newCardPopup = document.querySelector('.popup_type_new-card');
 const placesList = document.querySelector('.places__list');
 const profileEditPopup = document.querySelector('.popup_type_edit');
 const imagePopup = document.querySelector('.popup_type_image');
+const popUps = document.querySelectorAll('.popup');
 
-
-
+//Добавляем анимацию плавного открытия/закрытия
+popUps.forEach(function(popUp) {
+    popUp.classList.add('popup_is-animated');
+})
 
 // Выводим карточку на страницу
 for (const cardData of initialCards) {
